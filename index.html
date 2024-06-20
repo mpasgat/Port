@@ -28,7 +28,7 @@
             margin: auto;
             overflow: hidden;
         }
-        .bio, .projects {
+        .bio, .projects{
             padding: 20px;
             background: white;
             margin-top: 20px;
@@ -39,6 +39,10 @@
             text-align: center;
             margin-top: 20px;
         }
+        .comic-section img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -48,10 +52,16 @@
 <main>
 <div class="container">
     <section class="bio">
-        <h4>About Me</h4>
+        <h2>About Me</h2>
         <p>Hello! My name is Asgat and surname is Keruly. I am 19 years old. I am currently studying in Innopolis University
             at the first course. I have experience in programming languages such as Java, C/C++, Python, KuMir, HTML, CSS.
-            I have done some <a class="project-link" href="https://github.com/mpasgat/Projects.git">projects</a>  that deals with different difficult tasks. </p>
+            I have done some <a class="project-link" href="https://github.com/mpasgat/Projects.git">projects</a>  that deals with different difficult tasks.
+            To put a smile on your face, you can enjoy with some comic <button onclick="functionName()">click)</button>
+            <script>
+                function functionName(){
+                    window.open("comic.html");
+                }
+            </script>.</p>
     </section>
 
     <section class="projects">
@@ -75,8 +85,6 @@
             </li>
         </ul>
     </section>
-
-
 
     <section class="social-icons">
         <h3>Contacts</h3>
