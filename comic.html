@@ -23,37 +23,7 @@
     <div id="comic-container"></div>
 </section>
 
-<script>
-    const email = 'a.keruly@innopolis.university';
-
-    fetch(`https://fwd.innopolis.university/api/hw2?email=${email}`)
-
-        .then(response => response.json())
-
-        .then(data => {
-            return fetch(`https://fwd.innopolis.university/api/comic?id=${data}`);
-        })
-
-        .then(response => response.json())
-
-        .then(comic => {
-            const comicContainer = document.getElementById('comic-container');
-            const comicDate = new Date(comic.year, comic.month - 1, comic.day).toLocaleDateString();
-
-            const imgElement = document.createElement('img');
-            imgElement.src = comic["img"];
-            imgElement.alt = comic.alt;
-
-            const dateElement = document.createElement('p');
-            dateElement.textContent = comicDate;
-
-            const titleElement = document.createElement('h1');
-            titleElement.textContent = comic["safe_title"];
-
-            comicContainer.appendChild(titleElement);
-            comicContainer.appendChild(imgElement);
-            comicContainer.appendChild(dateElement);
-        })
-</script>
+<script src="dist/bundle.js"></script>
+    
 </body>
 </html>
